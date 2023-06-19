@@ -1,0 +1,4 @@
+build/bin
+frontend/dist
+frontend/node_modules
+frontend/src/pdfjs_reference

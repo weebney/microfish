@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="reset.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+	::selection {
+		background-color: #690E65;
+		color: lightyellow;
+	}
+
+	#main {
+		width: 100vw;
+		min-height: 100vh;
+		background-color: lightyellow;
+		color: black;
+		font-family: 'Instrument Sans', sans-serif;
+	}
+
+	b {
+		font-weight: 700;
+	}
+
+	#hero {
+		height: 100vh;
+	}
+
+	.herotop {
+		height: 60vh;
+		display: flex;
+		align-items: flex-end;
+		justify-content: left;
+	}
+
+	h1 {
+		font-size: 144px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	#banner {
+		position: absolute;
+		top: 0;
+		right: 5vw;
+		width: 30vh;
+		height: 30vh;
+		background-color: palevioletred;
+		display: flex;
+		flex-direction: column;
+	}
+
+	#topbanner {
+		min-height: 40%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: justify;
+
+		padding: 0.5vw;
+	}
+
+	.subbanner {
+		height: 13%;
+		background-color: #690E65;
+		color: lightyellow;
+
+		padding: 0.3vw;
+
+		border-top: 0.5vh solid palevioletred;
+
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.imgflex {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 100%;
+		height: 100%
+	}
+</style>
+
+<style>
+	#about {
+		background-color: #21005a;
+		color: lightyellow;
+	}
+
+	p {
+		font-size: 25px;
+		line-height: 1.5em;
+		text-align: justify;
+	}
+
+	.thighlight {
+		padding: 0.1em;
+		padding-top: 0em;
+		padding-bottom: 0em;
+	}
+
+	#aboutbottom {
+		width: 100vw;
+		height: 100vh;
+		background-color: darkorange;
+	}
+
+	.abtimg {
+		width: 100%;
+		filter: drop-shadow(0 0 1em black);
+	}
+
+	.abtdiv {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		margin: 1em;
+	}
+
+	.abtdiv > p {
+		margin-top: 0.66em;
+	}
+
+	.wipea {
+		text-decoration: none;
+		color: lightyellow;
+		font-size: 1.75vw;
+		cursor: pointer;
+	}
+
+	.osparent {
+		padding: 5vw;
+		padding-top: 2.5vw;
+		color: black;
+		display: flex;
+		height: 80%;
+	}
+
+	.osflex {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+	}
+
+
+	.platflex {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 50%;
+		height: 110%;
+	}
+
+	.osimg {
+		height: 10vw;
+	}
+
+	.moreinfo {
+		line-height: 1.5em;
+		text-align: right;
+	}
+
+	@media only screen and (max-width: 860px) {
+		p {
+			font-size: 25px;
+			line-height: 1.5em;
+			text-align: left;
+		}
+
+		h1 {
+			font-size: 15vw;
+		}
+
+		h2 {
+			font-size: 5vw;
+		}
+
+		#banner {
+			width: 33vw;
+			height: 33vw;
+		}
+
+		.imgflex {
+			display: unset;
+		}
+
+		.subbanner,
+		.wipea {
+			font-size: 3vw;
+		}
+
+		.osparent {
+			flex-direction: column;
+			width: 90%;
+		}
+
+		.osflex {
+			padding-top: 10vh;
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.platflex {
+			flex-direction: row;
+			width: 100%;
+		}
+
+		.abtdiv {
+			height: max-content;
+		}
+
+		.osimg {
+			height: 15vh;
+		}
+
+		.whath1 {
+			padding-top: 5vh;
+			text-align: center;
+		}
+
+		.moreinfo {
+			text-align: center;
+		}
+	}
+</style>
+
+<script>
+	window.onload = () => {
+		abt = document.getElementById("about")
+		dl = document.getElementById("aboutbottom")
+
+		function scrollAbout() {
+			abt.scrollIntoView({ behavior: "smooth" });
+
+		}
+
+		function scrollDownload() {
+			dl.scrollIntoView({ behavior: "smooth" });
+		}
+	}
+</script>
+
+<body>
+	<section id="main">
+		<div id="hero">
+			<div class="herotop">
+				<div style="display: flex;flex-direction: column-reverse;margin-left: 5vw;">
+					<h1>MICRO<b>FISH</b></h1>
+					<div style="display: flex;">
+						<span style="font-size: 9vw; line-height: 0em;">&hairsp;</span>
+						<h2 id="motd"></h2>
+					</div>
+				</div>
+			</div>
+			<div class="color1 heroColor"></div>
+			<div class="color2 heroColor"></div>
+			<div class="color3 heroColor"></div>
+			<div class="color4 heroColor"></div>
+			<div class="color5 heroColor"></div>
+		</div>
+		<div id="banner">
+			<div id="topbanner">
+			</div>
+			<div class="subbanner ">
+				<a class="wipea"
+					onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">ABOUT</a>
+			</div>
+			<div class="subbanner">
+				<a class="wipea"
+					onclick="document.getElementById('aboutbottom').scrollIntoView({ behavior: 'smooth' });">DOWNLOAD</a>
+			</div>
+			<div class="subbanner">
+				<a href="https://github.com/weebney/microfish" target="_blank" class="wipea">SOURCE CODE</a>
+			</div>
+		</div>
+		<section id="about">
+			<div style="padding: 5vw;padding-top: 2.5vw;padding-bottom: 0;min-height: 100vh;">
+				<h1 class="whath1"><b>WHAT?</b></h1>
+				<br>
+				<br>
+				<div>
+					<p style="margin-left: 1em;">
+						Microfish rips the heart out of Firefox's PDF reader and places it into a
+						<span class="color5 thighlight">&nbsp;cybernetic exoskeleton.&nbsp;</span>
+						<br>
+						This exoskeleton gives it unlimited power—<span class="color4 thighlight">&nbsp;extreme
+							flexibility,&nbsp;</span>
+						<span class="color3 thighlight">&nbsp;live reloading,&nbsp;</span> and <span
+							class="color2 thighlight">&nbsp;blazingly
+							fast performance.&nbsp;</span>
+						<br>
+						<br>
+					</p>
+					<div class="imgflex">
+						<div class="abtdiv">
+							<img src="./asset/gifs/interface.gif"
+								class="abtimg">
+							<p style="text-align: center;">Simple, Powerful Interface</p>
+						</div>
+						<div class="abtdiv">
+							<img src="./asset/gifs/annotate.gif"
+								class="abtimg">
+							<p style="text-align: center;">Editing & Annotations</p>
+						</div>
+						<div class="abtdiv">
+							<img src="./asset/gifs/search.gif"
+								class="abtimg">
+							<p style="text-align: center;">Feature-Rich User Experience</p>
+							<!-- <p style="text-align: center;">Light & <wbr>Dark Mode</p> -->
+						</div>
+						<div class="abtdiv">
+							<img src="./asset/gifs/latex.gif"
+								class="abtimg">
+							<p style="text-align: center;">Live Reloading</p>
+						</div>
+					</div>
+					<br>
+					<br>
+					<h2 class="moreinfo"><b class="color4 thighlight">Microfish is the
+							tiny, all-powerful PDF
+							reader.</b></h2>
+					<p class="moreinfo"><a class="wipea" href="https://github.com/weebney/microfish"
+							style="font-size: 25px;">
+							<span style="text-decoration: underline;">
+								Read about microfish's technical details on GitHub
+							</span> →</a></p>
+					<br>
+
+				</div>
+			</div>
+			<div class="color5 heroColor"></div>
+			<div class="color4 heroColor"></div>
+			<div class="color3 heroColor"></div>
+			<div class="color2 heroColor"></div>
+			<div id="aboutbottom">
+				<div class="osparent">
+					<div class="osflex">
+						<br>
+						<h1 style="text-align: left;font-weight: 700;width: 66%;">LET'S GET FISHY.</h1>
+						<h2 style="text-align:left;width: 70%;margin-left: 1.1em;">Select your platform for installation
+							instructions.</h2>
+					</div>
+					<div class="platflex">
+						<div class="abtdiv">
+							<a href="https://github.com/weebney/microfish/blob/master/docs/github/installation.md">
+								<img src="./asset/tux.svg" class="osimg">
+							</a>
+						</div>
+						<br>
+						<div class="abtdiv">
+							<a href="https://github.com/weebney/microfish/blob/master/docs/github/installation.md">
+								<img src="./asset/macos.svg" class="osimg">
+							</a>
+						</div>
+						<br>
+						<div class="abtdiv">
+							<a href="https://github.com/weebney/microfish/blob/master/docs/github/installation.md">
+								<img src="./asset/winblows.svg" class="osimg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+</body>
+
+<style>
+	/* Hero block styles */
+	.heroColor {
+		width: 100%;
+		height: 8vh;
+	}
+
+	.color1 {
+		background-color: darkorange;
+	}
+
+	.color2 {
+		background-color: #C34B1C;
+	}
+
+	.color3 {
+		background-color: #a52a2a;
+
+	}
+
+	.color4 {
+		background-color: #690E65;
+
+	}
+
+	.color5 {
+		background-color: indigo;
+	}
+</style>
+
+<script>
+	window.onload = () => {
+		const phrases =
+			["YOUR MOM'S FAVORITE PDF VIEWER.",
+				"YOUR MOM'S FAVORITE PDF VIEWER.",
+				"YOUR MOM'S FAVORITE PDF VIEWER.",
+				"LOVED BY HUMANS AND ALIENS ALIKE!",
+				"PDFER? I BARELY KNOW HER!",
+				"NOT MICROFICHE.",
+				"AS GOD INTENDED.",
+				"MORE THAN JUST A PRETTY DOCUMENT!",
+				"I CAN'T BELIEVE IT'S NOT POSTSCRIPT!",
+				"THE LAST PDF READER.",
+				"POWERED BY GOPHERS.",
+				"POWERED BY DRAGONS.",
+				"POWERED BY FOXES.",
+				"OPEN 'TIL 1AM OR LATER.",
+				"NOW WITH RANDOMIZED SPLASH TEXT!",
+			];
+		const motd = document.getElementById("motd");
+
+		let currentPhrase = getRandomPhrase();
+		motd.innerText = currentPhrase;
+
+		function getRandomPhrase() {
+			const randomIndex = Math.floor(Math.random() * phrases.length);
+			return phrases[randomIndex];
+		}
+
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (!entry.isIntersecting) {
+					currentPhrase = getRandomPhrase();
+					motd.innerText = currentPhrase;
+				}
+			});
+		});
+
+		observer.observe(motd);
+	}
+
+</script>
+
+</html>

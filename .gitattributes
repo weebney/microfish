@@ -1,0 +1,9 @@
+frontend/src/pdfjs/** linguist-vendored
+frontend/src/viewerdark.css linguist-vendored
+frontend/wailsjs/** linguist-generated
+build/** linguist-generated
+docs/** linguist-documentation
+docs/reset.css linguist-vendored
+*.go linguist-detectable
+*.go linguist-language=go
+*.go -text diff=golang
