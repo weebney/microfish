@@ -28,8 +28,11 @@ All this and more ensures Microfish will be the last PDF reader you'll ever want
 
 Microfish is extremely easy to use. Open it up, open a document by pressing the <img src="./docs/github/openFile-grey.svg" alt="PDF.js open file button">, et voilà—you're ready to start reading!
 
-<div style="text-align:center">
-<img src="https://rossta.net/assets/images/screenshots/screenshot-pdf-viewer.png" alt="Opening a file in Microfish animated demonstration" style="width:50%">
+<div style="text-align:center;" align="center">
+<img src="./docs/asset/gifs/interface.gif" alt="Opening a file in Microfish animated demonstration" style="width:100%;">
+<img src="./docs/asset/gifs/annotate.gif" alt="Opening a file in Microfish animated demonstration" style="width:100%;">
+<img src="./docs/asset/gifs/latex.gif" alt="Opening a file in Microfish animated demonstration" style="width:100%;">
+<img src="./docs/asset/gifs/search.gif" alt="Opening a file in Microfish animated demonstration" style="width:100%;">
 </div>
 
 ## Microfish for the Technically Savvy
