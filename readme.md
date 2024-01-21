@@ -30,9 +30,6 @@ Microfish is extremely easy to use. Open it up, open a document by pressing the 
 
 <div style="text-align:center;" align="center">
 <img src="./docs/asset/gifs/interface.gif" alt="Opening a file in Microfish animated demonstration" style="width:100%;">
-<img src="./docs/asset/gifs/annotate.gif" alt="Opening a file in Microfish animated demonstration" style="width:100%;">
-<img src="./docs/asset/gifs/latex.gif" alt="Opening a file in Microfish animated demonstration" style="width:100%;">
-<img src="./docs/asset/gifs/search.gif" alt="Opening a file in Microfish animated demonstration" style="width:100%;">
 </div>
 
 ## Microfish for the Technically Savvy
